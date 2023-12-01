@@ -4,11 +4,11 @@
 mkdir ~/bin
 PATH=~/bin:$PATH
 cd ~/bin
-sudo apt update -y
-sudo apt install curl -y
+apt update -y
+apt install curl -y
 curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
-git clone https://github.com/akhilnarang/scripts.git scripts
+git clone https://github.com/eartinity/scripts.git scripts
 cd scripts
 bash setup/android_build_env.sh
 
