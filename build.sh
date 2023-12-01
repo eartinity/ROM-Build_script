@@ -4,11 +4,11 @@
 mkdir ~/bin
 PATH=~/bin:$PATH
 cd ~/bin
-apt update -y
-apt install curl -y
+sudo apt update -y
+sudo apt install curl -y
 curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
-git clone https://github.com/eartinity/scripts.git scripts
+git clone https://github.com/akhilnarang/scripts.git scripts
 cd scripts
 bash setup/android_build_env.sh
 
@@ -30,5 +30,4 @@ make bacon -j$(nproc --all)
 
 # Upload
 cd out/target/product/r5x
-curl -sL https://git.io/file-transfer | sh
-./transfer wet aosp*.zip￼Enter
+curl --upload-file ./PixelExperience*.zip https://transfer.sh/PixelExperience*.zip
